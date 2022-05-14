@@ -56,7 +56,7 @@ def play():
     while not is_game_over:
         user_score = calculate_score(user_cards)
         computer_score = calculate_score(computer_cards)
-        print(f"   Your cards: {user_cards}, current score: {user_score}")
+        print(f"\n   Your cards: {user_cards}, current score: {user_score}")
         print(f"   Computer's first card: {computer_cards[0]}")
 
         # if theres a blackjack or the user's score is too high, we don't need to continue to the next iteration
@@ -64,7 +64,7 @@ def play():
             is_game_over = True
         else:
             hitme = input(
-                "\nType 'y' to get another cards or press enter to continue "
+                "\nType 'Y' to get another cards or press enter to continue: "
             ).lower()
             if hitme == "y":
                 user_cards.append(dealcard())
@@ -84,7 +84,7 @@ def play():
 if __name__ == "__main__":
     while (
         input(
-            "\nDo you want to play a game of Blackjack?\nType 'y' to proceed: "
+            "\nDo you want to play a game of Blackjack?\nType 'Y' to proceed: "
         ).lower()
         == "y"
     ):
